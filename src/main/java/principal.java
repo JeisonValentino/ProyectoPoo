@@ -40,7 +40,7 @@ public class principal {
             }
 
 
-            if (session.equals("salir") || session.equals("Cerrar session")) {
+            if (session.equals("salire") || session.equals("Cerrar session")) {
 
                 Session = false;
             }
