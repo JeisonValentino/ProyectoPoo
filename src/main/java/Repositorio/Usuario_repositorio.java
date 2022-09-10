@@ -16,12 +16,9 @@ public class Usuario_repositorio {
     consultaDatabase d=new consultaDatabase();
 
      public List<Usuario> obtenerListaUsuario(){
-System.out.println("paso por repositorio");
         ResultSet re= d.consultarTablaTodo("usuario");
 
         List<Usuario> userEntityList = new ArrayList<>();
-
-        String cadena ;
         try {
             while (re.next()) {
                 Usuario userEntity=new  Usuario();
