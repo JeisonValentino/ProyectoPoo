@@ -19,7 +19,7 @@ public class Servicio_Login implements inteInterface_Login {
 
     @Override
     public List<Usuario> obtenerListaUsuarios() {
-        System.out.println("paso lista user ");
+
         List<Usuario> user = usuario_repositorio.obtenerListaUsuario();
         return user;
     }
