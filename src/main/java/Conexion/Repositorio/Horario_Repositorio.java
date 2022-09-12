@@ -21,9 +21,9 @@ public class Horario_Repositorio {
         try {
             while (re.next()) {
                 Horarios HorariosEntity=new  Horarios();
-                HorariosEntity.setHAtencion(re.getString(""));
-                HorariosEntity.setHCita(re.getString(""));
-                HorariosEntity.setHProfesionales(re.getString(""));
+                HorariosEntity.setIDhorarios(re.getString("IDhorarios"));
+                HorariosEntity.setHProfesionales(re.getString("HorarioProfesional"));
+                HorariosEntity.setIdProfesional(re.getString("idProfesional"));
                 userEntityList.add(HorariosEntity);
             }
         }catch (Exception ex){

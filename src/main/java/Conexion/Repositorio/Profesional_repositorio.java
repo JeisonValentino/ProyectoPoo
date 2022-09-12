@@ -19,7 +19,8 @@ public class Profesional_repositorio {
         Statement st= con.conectar().createStatement();
         ResultSet consulta=null;
 
-         consulta =st.executeQuery("insert into profesionales ()values ('"+profesionales.getNombre()+"','"+profesionales.getAreaTrabajo()+"','"+profesionales.getIDProfesional()+"','"+profesionales.getTipoDeProfesion()+"')");
+         consulta =st.executeQuery("insert into profesionales (IDprofesionales , nombre,dni,TipoDeProfesion,areaTrabajo ,idLogin) " +
+                 "values ('"+profesionales.getIDProfesional()+"','"+profesionales.getNombre()+"','"+profesionales.getDni()+"','"+profesionales.getTipoDeProfesion()+"','"+profesionales.getAreaTrabajo()+"','"+profesionales.getIdLogin()+"')");
 
 
     }
@@ -32,11 +33,12 @@ public class Profesional_repositorio {
         try {
             while (re.next()) {
                 Profesionales profesionalesEntity=new  Profesionales();
-                profesionalesEntity.setAreaTrabajo(re.getString(""));
-                profesionalesEntity.setDni(re.getInt(""));
-                profesionalesEntity.setIDProfesional(re.getString(""));
-                profesionalesEntity.setNombre(re.getString(""));
-                profesionalesEntity.setTipoDeProfesion(re.getString(""));
+                profesionalesEntity.setAreaTrabajo(re.getString("areaTrabajo"));
+                profesionalesEntity.setDni(re.getInt("dni"));
+                profesionalesEntity.setIDProfesional(re.getString("IDprofesionales"));
+                profesionalesEntity.setNombre(re.getString("nombre"));
+                profesionalesEntity.setTipoDeProfesion(re.getString("TipoDeProfesion"));
+                profesionalesEntity.setIdLogin(re.getInt("idLogin"));
                 userEntityList.add(profesionalesEntity);
             }
         }catch (Exception ex){
