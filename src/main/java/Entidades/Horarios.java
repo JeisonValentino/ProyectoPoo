@@ -3,52 +3,38 @@ package Entidades;
 
 
 public class Horarios {
+private String IDhorarios;
 
-    private String HAtencion;
-    private String HCita;
     private String HProfesionales;
-
+private String idProfesional;
     public Horarios() {
     }
 
-    public Horarios(String HAtencion, String HCita, String HProfesionales) {
-        this.HAtencion = HAtencion;
-        this.HCita = HCita;
+    public Horarios( String HProfesionales ,String IDhorarios) {
+
+        this.IDhorarios=IDhorarios;
         this.HProfesionales = HProfesionales;
     }
 
+    public String getIdProfesional() {
+        return idProfesional;
+    }
 
+    public void setIdProfesional(String idProfesional) {
+        this.idProfesional = idProfesional;
+    }
 
+    public String getIDhorarios() {
+        return IDhorarios;
+    }
 
-
+    public void setIDhorarios(String IDhorarios) {
+        this.IDhorarios = IDhorarios;
+    }
 
     /**
      * @return the HAtencion
      */
-    public String getHAtencion() {
-        return HAtencion;
-    }
-
-    /**
-     * @param HAtencion the HAtencion to set
-     */
-    public void setHAtencion(String HAtencion) {
-        this.HAtencion = HAtencion;
-    }
-
-    /**
-     * @return the HCita
-     */
-    public String getHCita() {
-        return HCita;
-    }
-
-    /**
-     * @param HCita the HCita to set
-     */
-    public void setHCita(String HCita) {
-        this.HCita = HCita;
-    }
 
     /**
      * @return the HProfesionales

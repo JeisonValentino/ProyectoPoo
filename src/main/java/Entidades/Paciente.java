@@ -4,13 +4,17 @@
  */
 package Entidades;
 
+import lombok.Data;
+
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author Usuario
  */
+@Data
 public class Paciente {
+    private String id;
 	private String nombre;
 	private String apellidos;
 	private String genero;
@@ -19,8 +23,18 @@ public class Paciente {
         private String NumeroTelefono;
         private int edad;
 
+    public Paciente(String id, String nombre, String apellidos, String genero, String nombreCompleto, String direccion, String numeroTelefono, int edad) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.genero = genero;
+        NombreCompleto = nombreCompleto;
+        Direccion = direccion;
+        NumeroTelefono = numeroTelefono;
+        this.edad = edad;
+    }
 
-        public Paciente (){
+    public Paciente (){
         nombre = JOptionPane.showInputDialog("Ingrese el nombre");
         apellidos = JOptionPane.showInputDialog("Ingrese el apellido paterno");
         genero = JOptionPane.showInputDialog("Ingrese (M) Masculino (F) Femenino");
@@ -44,57 +58,5 @@ public class Paciente {
         return cadena;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-        nombrecompleto();
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-        nombrecompleto();
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-        nombrecompleto();
-    }
-
-    public String getDireccion() {
-        return Direccion;
-    }
-
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
-        nombrecompleto();
-    }
-
-    public String getNumeroTelefono() {
-        return NumeroTelefono;
-    }
-
-    public void setNumeroTelefono(String NumeroTelefono) {
-        this.NumeroTelefono = NumeroTelefono;
-        nombrecompleto();
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-        nombrecompleto();
-    }
 }

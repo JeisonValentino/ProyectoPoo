@@ -8,11 +8,6 @@ import java.sql.Statement;
 public class consultaDatabase {
 
 
-
-
-
-
-
     public ResultSet  consultarTablaTodo(String NombreTabla ) {
         Conexion con = new Conexion();
         Statement st;

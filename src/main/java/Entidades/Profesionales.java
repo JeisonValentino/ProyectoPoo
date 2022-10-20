@@ -9,19 +9,26 @@ public class Profesionales {
     private Integer Dni;
     private String TipoDeProfesion;
     private String AreaTrabajo;
-
+private String idLogin;
     public Profesionales() {
     }
 
-    public Profesionales(String IDProfesional, String Nombre, Integer Dni, String TipoDeProfesion, String AreaTrabajo) {
+    public Profesionales(String IDProfesional, String Nombre, Integer Dni, String TipoDeProfesion, String AreaTrabajo, String idLogin) {
         this.IDProfesional = IDProfesional;
         this.Nombre = Nombre;
         this.Dni = Dni;
         this.TipoDeProfesion = TipoDeProfesion;
         this.AreaTrabajo = AreaTrabajo;
+        this.idLogin=idLogin;
     }
 
+    public String getIdLogin() {
+        return idLogin;
+    }
 
+    public void setIdLogin(String idLogin) {
+        this.idLogin = idLogin;
+    }
 
     /**
      * @return the IDProfesional
