@@ -1,6 +1,10 @@
 import Autentificacion.login;
 import Entidades.Profesionales;
 import Servicios.Servicio_Login;
+import Vistas.Loading;
+import Vistas.LoginVista.Presentacion;
+
+import javax.swing.*;
 import java.io.IOException;
 import java.util.*;
 public class principal {
@@ -8,6 +12,21 @@ public class principal {
     public static final String ANSI_RED = "\u001B[31m";
 
     public static void main(String[] args) throws IOException, InterruptedException {
+        Loading loading  = new Loading();
+
+                loading.setVisible(true);
+
+
+        loading.carga();
+        loading.setVisible(false);
+        Presentacion login=new Presentacion();
+        SwingUtilities.invokeLater(new Runnable() {
+
+            @Override
+            public void run() {
+                login.setVisible(true);
+            }
+        });
 
         Servicio_Login servicio_login = new Servicio_Login();
         List<Profesionales> profesionalList = servicio_login.obtenerListaUsuarios();
@@ -17,7 +36,7 @@ public class principal {
 
 
 
-        Boolean Session=true ,Session1= true,Session2=true;
+        Boolean Session=true ,Session1= true,Session2=true , Session3=true;
         Scanner sc = new Scanner(System.in);
 
         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
@@ -45,9 +64,31 @@ public class principal {
             }
 
             if (session.equals("Solicitar cita")) {
+                Session2 = true;
+
+                while(Session2){
+
+                    System.out.println("Listar Areas medicas ");
+                    System.out.println("regresar opciones anteriores");
+                    System.out.println("salir");
+                    session = sc.nextLine();
+
+                    if(session.equals("Liastar Areas medicas ")){
 
 
 
+
+
+                    }else if(session.equals("regresar opciones anteriores ")){
+
+                        Session2=false;
+                    }else if(session.equals("salir")){
+
+
+                    }
+
+
+                }
 
 
 

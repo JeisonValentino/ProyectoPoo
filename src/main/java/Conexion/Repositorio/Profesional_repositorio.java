@@ -38,7 +38,7 @@ public class Profesional_repositorio {
                 profesionalesEntity.setIDProfesional(re.getString("IDprofesionales"));
                 profesionalesEntity.setNombre(re.getString("nombre"));
                 profesionalesEntity.setTipoDeProfesion(re.getString("TipoDeProfesion"));
-                profesionalesEntity.setIdLogin(re.getInt("idLogin"));
+                profesionalesEntity.setIdLogin(re.getString("idLogin"));
                 userEntityList.add(profesionalesEntity);
             }
         }catch (Exception ex){

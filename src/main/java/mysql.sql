@@ -19,7 +19,7 @@ create table profesionales (IDprofesionales varchar(20) not null primary key
 create table Paciente(IdPaciente varchar(20) not null primary key ,nombre varchar(20) not null
                      ,apellidos varchar(20) not null, genero varchar(20) not null , NombreCompleto varchar(20) not null
                       , Dirrecion varchar(20) not null ,NumeroTelefono varchar(20)
-                     not null , edad int not null
+                     not null , edad int not null , dni varchar(20) not null
                      );
 
 

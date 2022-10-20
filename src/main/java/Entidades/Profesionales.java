@@ -9,11 +9,11 @@ public class Profesionales {
     private Integer Dni;
     private String TipoDeProfesion;
     private String AreaTrabajo;
-private int idLogin;
+private String idLogin;
     public Profesionales() {
     }
 
-    public Profesionales(String IDProfesional, String Nombre, Integer Dni, String TipoDeProfesion, String AreaTrabajo, int idLogin) {
+    public Profesionales(String IDProfesional, String Nombre, Integer Dni, String TipoDeProfesion, String AreaTrabajo, String idLogin) {
         this.IDProfesional = IDProfesional;
         this.Nombre = Nombre;
         this.Dni = Dni;
@@ -22,11 +22,11 @@ private int idLogin;
         this.idLogin=idLogin;
     }
 
-    public int getIdLogin() {
+    public String getIdLogin() {
         return idLogin;
     }
 
-    public void setIdLogin(int idLogin) {
+    public void setIdLogin(String idLogin) {
         this.idLogin = idLogin;
     }
 
